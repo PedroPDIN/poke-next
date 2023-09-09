@@ -1,0 +1,21 @@
+@import '../variables';
+
+.footer_container {
+  background-color: $background-color-white !important;
+  bottom: 0;
+  border-top: 1px solid $color-black;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+
+  p {
+    font-weight: bold;
+
+    span {
+      color: $font-red;
+    }
+  }
+}
