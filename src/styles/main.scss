@@ -1,2 +1,9 @@
 @import '_variables.scss';
 @import '_global.scss';
+
+// pages
+@import './pages/home.module';
+
+// components
+@import './components/header.module';
+@import './components/footer.module';
