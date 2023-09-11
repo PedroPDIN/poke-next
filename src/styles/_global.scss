@@ -6,4 +6,6 @@
 
 body {
   background-color: $background-color-primary;
+  min-height: 100vh;
+  position: relative;
 }

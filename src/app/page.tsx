@@ -40,7 +40,7 @@ export default async function Home() {
 
           <p className={style.name_pokemon}>{pokemon.name}</p>
           
-          <Link className={ style.btn_description } href={pokemon.url}>Descrição</Link>
+          <Link className={ style.btn_description } href={`/pokemon/${pokemon.id}`}>Descrição</Link>
         </article>
       ))}
     </main>

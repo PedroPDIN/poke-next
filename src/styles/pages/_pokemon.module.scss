@@ -1,0 +1,176 @@
+@import '../variables';
+@import '../mixins';
+
+.pokemon_container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  justify-content: center;
+  padding-bottom: 80px;
+  width: 100%;
+  
+  .pokemon_content {
+    background-color: $background-color-white;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px $color-black;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    width: 40em;
+    
+    .nav_content {
+      align-items: center;
+      color: $font-black;
+      display: flex;
+      font-size: 20px;
+      font-weight: 700;
+      gap: 0.3em;
+      max-width: 100%;
+      margin-left: 20px;
+      transition: all 0.2s;
+      text-decoration: none;
+      
+      &:hover {
+        color: $font-red
+      };
+    };
+    
+    .title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 14px;
+      
+      &::first-letter {
+        text-transform: uppercase;
+      };
+    };
+    
+    .img_container {
+      align-items: center;
+      display: flex;
+      height: 240px;
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+    };
+    
+    .info_container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      
+      span {
+        color: $font-red;
+        display: flex;
+        font-weight: 700;
+        font-size: 20px;
+        
+        p {
+          color: $font-black;
+          font-weight: 600;
+          margin-left: 10px;
+        };
+      };
+    };
+
+    .types_container {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 20px;
+      gap: 0.4em;
+      margin-top: 4px;
+      width: 100%;
+      
+      .title_types {
+        align-items: center;
+        color: $font-red;
+        display: flex;
+        font-weight: 700;
+      };
+    };
+  };
+};
+
+.style_type_normal {
+  @include type_style($normal)
+};
+
+.style_type_fighting {
+  @include type_style($fighting)
+};
+
+.style_type_flying {
+  @include type_style($flying)
+};
+
+.style_type_poison {
+  @include type_style($poison)
+};
+
+.style_type_ground {
+  @include type_style($ground)
+};
+
+.style_type_rock {
+  @include type_style($rock)
+};
+
+.style_type_bug {
+  @include type_style($bug)
+};
+
+.style_type_ghost {
+  @include type_style($ghost)
+};
+
+.style_type_steel {
+  @include type_style($steel)
+};
+
+.style_type_fire {
+  @include type_style($fire)
+};
+
+.style_type_water {
+  @include type_style($water)
+};
+
+.style_type_grass {
+  @include type_style($grass)
+};
+
+.style_type_electric {
+  @include type_style($electric)
+};
+
+.style_type_psychic {
+  @include type_style($psychic)
+};
+
+.style_type_ice {
+  @include type_style($ice)
+};
+
+.style_type_dragon {
+  @include type_style($dragon)
+};
+
+.style_type_dark {
+  @include type_style($dark)
+};
+
+.style_type_fairy {
+  @include type_style($fairy)
+};
+
+.style_type_unknown {
+  @include type_style($unknown)
+};
+
+.style_type_shadow {
+  @include type_style($shadow)
+};

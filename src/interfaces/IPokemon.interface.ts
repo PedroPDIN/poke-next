@@ -1,4 +1,4 @@
-interface dataPokemon {
+export interface dataPokemon {
   id?: number
   name: string,
   url: string,
@@ -10,3 +10,11 @@ export interface dataPokemons {
   previous: null | string,
   results: dataPokemon[],
 };
+
+export interface infoPokemon {
+  name: string,
+  img: string,
+  height: number,
+  weight: number,
+  types: string[],
+}

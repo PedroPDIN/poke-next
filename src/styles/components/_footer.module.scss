@@ -3,13 +3,13 @@
 .footer_container {
   background-color: $background-color-white !important;
   bottom: 0;
-  box-shadow: 0px -2px 15px black;
+  box-shadow: 0px -2px 20px $color-black;
   border-top: 1px solid $color-black;
   display: flex;
   height: 80px;
   justify-content: center;
   padding: 20px;
-  position: relative;
+  position: absolute;
   width: 100%;
 
 

@@ -2,11 +2,35 @@
 $background-color-primary: rgb(189, 189, 189);
 $background-color-white: white;
 $background-color-red: rgb(223, 8, 8);
+$background-color-red-hover: rgb(185, 42, 42);
 
 // fonts
 $font-white: #ffffff;
 $font-red: rgb(223, 8, 8);
+$font-black: black;
 
 // colors
 $color-black: black;
 $color-dark: rgb(78, 77, 77);
+
+// colors type pokemon
+$normal: #a8a77a;
+$fighting: #c22e28;
+$flying: #a98ff3;
+$poison: #a33ea1;
+$ground: #e2bf65;
+$rock: #b6a136;
+$bug: #a6b91a;
+$ghost: #735797;
+$steel: #b7b7ce;
+$fire: #ee8130;
+$water: #6390f0;
+$grass: #7ac74c;
+$electric: #f7d02c;
+$psychic: #f95587;
+$ice: #96d9d6;
+$dragon: #6f35fc;
+$dark: #705746;
+$fairy: #d685ad;
+$unknown: $psychic;
+$shadow: #000d1a;

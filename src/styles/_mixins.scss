@@ -1,0 +1,11 @@
+@mixin type_style($color) {
+  color: $font-white;
+  background-color: $color;
+  border-radius: 14px;
+  font-weight: 700;
+  padding: 2px 6px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  };
+};
