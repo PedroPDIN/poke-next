@@ -17,4 +17,10 @@ export interface infoPokemon {
   height: number,
   weight: number,
   types: string[],
-}
+};
+
+export interface searchPokemon {
+  id: number,
+  name: string,
+  img: string,
+};

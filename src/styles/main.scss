@@ -3,9 +3,10 @@
 @import '_mixins.scss';
 
 // pages
-@import './pages/home.module';
-@import './pages/pokemon.module';
+@import './pages/_home.module';
+@import './pages/_pokemon.module';
 
 // components
-@import './components/header.module';
-@import './components/footer.module';
+@import './components/_header.module';
+@import './components/_footer.module';
+@import './components/_searchInput.module';
