@@ -10,11 +10,12 @@
     border-width: 1px 0px 1px 1px;
     font-size: 20px;
     max-height: 100%;
+    outline: 0;
     padding: 4px;
 
     &::placeholder {
       font-style: italic
-    }
+    };
   };
 
   .icon_content {
@@ -28,7 +29,7 @@
 
     &:hover {
       background-color: $background-color-red-hover;
-    }
+    };
 
     .icon {
       align-items: center;
@@ -36,6 +37,6 @@
       display: flex;
       font-size: 24px;
       font-weight: 700;
-    }
-  }
-}
+    };
+  };
+};

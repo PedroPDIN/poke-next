@@ -3,6 +3,8 @@ import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 import { searchPokemon } from "@/interfaces/IPokemon.interface";
 
+import style from "@/styles/pages/_search.module.scss";
+
 type typePoke = {
   id: number,
   name: string,
@@ -20,37 +22,49 @@ async function dataSearch(name: string): Promise<searchPokemon> {
 }
 
 export default async function SearchPokemon({ params }: { params: { name: string } }) {
-  const { id, name, img } = await dataSearch(params.name)
+  const { id, name, img } = await dataSearch(params.name.toLowerCase())
 
   return (
-    <section>
+    <section className={style.search_container}>
 
-      <article>
-        <Link href="/">
+      <article className={style.nav_content}>
+        <Link className={style.btn_back} href="/">
           <BiArrowBack />
-          Voltar
+          Página Inicial
         </Link>
 
-        <span>Resultado de <span>{`${name}`}</span></span>
-
+        <span
+          className={style.info_search}
+        >
+          Resultado de <span className={style.name}>{`${params.name}`}</span>.
+        </span>
       </article>
 
-      <article>
-        <div>
-          <b>{`#${id}`}</b>
+
+      <article className={style.card_container}>
+        <div className={style.card_content}>
+          <div className={style.numeric_id_pokemon}>
+            <b>{`#${id}`}</b>
+          </div>
+
+          <div className={style.img_pokemon}>
+            <Image
+              className={ style.img }
+              src={img}
+              alt={name}
+              fill
+            />
+          </div>
+
+          <span className={style.name_pokemon}>{name}</span>
+
+          <Link
+            className={style.btn_description}
+            href={`/pokemon/${id}`}
+          >
+            Descrição
+          </Link>
         </div>
-
-        <div>
-          <Image
-            src={img}
-            alt={name}
-            fill
-          />
-        </div>
-
-        <p>{name}</p>
-
-        <Link href={`/pokemon/${id}`}>Descrição</Link>
       </article>
     </section>
   )
