@@ -17,7 +17,7 @@ export default function SearchInput() {
     <div className={style.search_container}>
       <input
         type="text"
-        placeholder="ex: pikachu"
+        placeholder="ex: Pikachu"
         value={namePoke}
         name={namePoke}
         onChange={onChange}
