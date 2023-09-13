@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { BiSolidRightArrowCircle } from "react-icons/bi";
 import { dataPokemons } from "@/interfaces/IPokemon.interface";
 import CardsPokemon from "@/components/CardsPokemon";
 
@@ -29,6 +31,11 @@ export default async function Home() {
           name={pokemon.name}
         />
       ))}
+
+      <Link className={style.more_container} href="/pokemons">
+        <span>Ver Mais</span>
+        <BiSolidRightArrowCircle />
+      </Link>
     </main>
   )
 }
