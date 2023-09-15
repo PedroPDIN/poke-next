@@ -1,0 +1,21 @@
+@import "../variables";
+
+.pagination_content {
+  button {
+    background-color: $background-color-white;
+    color: $font-black;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $background-color-red;
+      color: $font-white;
+      font-weight: 600;
+    };
+  };
+};
+
+.css-1itoclz-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: $background-color-red-opacity !important;
+  color: $font-white !important;
+  font-weight: 800 !important;
+};

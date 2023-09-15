@@ -10,8 +10,8 @@ interface Props {
 
 export default function CardsPokemon({ pokeId, name }: Props) { 
   return (
-    <section>
-      <article key={pokeId} className={style.card_container}>
+    <article>
+      <div key={pokeId} className={style.card_container}>
         <div className={style.numeric_id_pokemon}>
           <b>{`#${pokeId}`}</b>
         </div>
@@ -28,7 +28,7 @@ export default function CardsPokemon({ pokeId, name }: Props) {
         <p className={style.name_pokemon}>{name}</p>
 
         <Link className={style.btn_description} href={`/pokemon/${pokeId}`}>Descrição</Link>
-      </article>
-    </section>
+      </div>
+    </article>
   )
 };

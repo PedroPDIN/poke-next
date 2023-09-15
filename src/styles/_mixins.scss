@@ -9,3 +9,14 @@
     text-transform: uppercase;
   };
 };
+
+
+@mixin body_style_in_footer($paddind_b_px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: $paddind_b_px; // referente ao tamanho do footer + a tamanho de espaçamento
+  width: 100%;
+};

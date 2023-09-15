@@ -1,14 +1,9 @@
 @import '../variables';
+@import '../mixins';
 
 .home_container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
-  margin-top: 40px;
-  padding-bottom: 210px; // referente ao tamanho do footer + a tamanho de espaçamento
-  width: 100%;
-
+  @include body_style_in_footer(190px);
+  
   .more_container {
     align-items: center;
     background-color: $background-color-red;
@@ -16,18 +11,18 @@
     border-radius: 8px;
     color: $font-white;
     display: flex;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
     gap: 0.3em;
-    margin-bottom: 140px;
+    margin-bottom: 138px;
     position: absolute;
     padding: 2px 10px;
     text-decoration: none;
     transition: all 0.2s;
 
     &:hover {
-      color: $font-red;
       background-color: $background-color-white;
+      color: $font-red;
     };
   };
 };

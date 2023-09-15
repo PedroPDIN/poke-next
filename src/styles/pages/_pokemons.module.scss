@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../mixins";
+
+.pokemons_container {
+  @include body_style_in_footer(200px);
+
+  .pokemons_pagination {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    margin-bottom: 150px;
+    position: absolute;
+  };
+};
