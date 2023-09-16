@@ -17,16 +17,28 @@ type Poke = {
   height: number,
   weight: number,
   types: TypesPoke[],
+  sprites: {
+    versions: {
+      "generation-v": {
+        "black-white": {
+          animated: {
+            front_default: string;
+          };
+        };
+      };
+    };
+  };
 };
 
 async function dataPokemon(id: string): Promise<infoPokemon> {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const data: Poke = await response.json();
+  const urlAnimated: string = data.sprites.versions["generation-v"]["black-white"].animated.front_default;
   const types = data.types.map((poke) => poke.type.name);
 
   return {
     name: data.name,
-    img: `https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`,
+    img: urlAnimated,
     height: data.height,
     weight: data.weight,
     types 
@@ -47,7 +59,7 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
         <h1 className={style.title}>{name}</h1>
 
         <div className={style.img_container}>
-          <Image src={img} alt={name} fill />
+          <Image src={img} alt={name} fill className={ style.img} />
         </div>
 
         <div className={style.info_container}>
