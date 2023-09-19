@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image"
+
 export interface dataPokemon {
   id?: number
   name: string,
@@ -13,7 +15,7 @@ export interface dataPokemons {
 
 export interface infoPokemon {
   name: string,
-  img: string,
+  img: string | StaticImageData,
   height: number,
   weight: number,
   types: string[],
@@ -22,5 +24,5 @@ export interface infoPokemon {
 export interface searchPokemon {
   id: number,
   name: string,
-  img: string,
+  urlImg: string | StaticImageData,
 };

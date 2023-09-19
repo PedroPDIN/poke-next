@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 import { BiArrowBack } from "react-icons/bi";
 import { infoPokemon } from "@/interfaces/IPokemon.interface";
+import pokeball from "../../../../public/images/pokeball-2.png";
 
 import style from "@/styles/pages/_pokemon.module.scss";
 
@@ -34,11 +36,12 @@ async function dataPokemon(id: string): Promise<infoPokemon> {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const data: Poke = await response.json();
   const urlAnimated: string = data.sprites.versions["generation-v"]["black-white"].animated.front_default;
+  const gifPoke: string | StaticImageData = !urlAnimated ? pokeball : urlAnimated;
   const types = data.types.map((poke) => poke.type.name);
 
   return {
     name: data.name,
-    img: urlAnimated,
+    img: gifPoke,
     height: data.height,
     weight: data.weight,
     types 
@@ -59,7 +62,7 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
         <h1 className={style.title}>{name}</h1>
 
         <div className={style.img_container}>
-          <Image src={img} alt={name} fill className={ style.img} />
+          <Image src={img} alt={name} fill className={style.img} />
         </div>
 
         <div className={style.info_container}>

@@ -1,15 +1,15 @@
 'use client'
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { useRouter } from 'next/navigation';
 
 import styled from "@/styles/components/_controlsPagination.module.scss";
 
 interface Props {
   amountPage: number;
-}
+};
 
 export default function ControlsPagination({ amountPage }: Props) {
   const [page, setPage] = useState<number>(2);
@@ -36,4 +36,4 @@ export default function ControlsPagination({ amountPage }: Props) {
       />
     </Stack>
   )
-}
+};
