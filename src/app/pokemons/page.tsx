@@ -4,37 +4,38 @@ import { dataPokemons } from "@/interfaces/IPokemon.interface";
 
 import styled from "@/styles/pages/_pokemons.module.scss";
 
-function calcPagination(page: number): {initial: string, limit: string} {
-  const maxLimit: number = 40;
-  const limit: string = (page * maxLimit).toString();
-  const initial: string = (+limit - maxLimit).toString();
-  
-  return {
-    initial,
-    limit,
+async function validateCount(end: number, limit: number): Promise<number> {
+  const currentCount: number = end;
+
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${currentCount}&limit=${limit}`);
+  const data: dataPokemons = await response.json();
+
+  if (data.results.length === 0) {
+    return data.count - 1;
   };
+
+  return data.count;
 };
 
-async function dataPokemon(page: number | undefined) {
-  let offSet: string = "0";
-  let limit: string = "40";
+async function dataPokemon(page: number | undefined): Promise<dataPokemons> {
+  const limit: number = 40;
+  let offSet: number = 0;
 
   if (page) {
-    const { initial, limit } = calcPagination(page);
-
-    offSet = initial;
-    limit;
+    offSet = (page * limit);
   };
-
+  
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offSet}&limit=${limit}`);
   const data: dataPokemons = await response.json();
+  const currentCount: number = await validateCount(data.count, limit);
+  data.count = currentCount;
 
   data.results.forEach((pokemon, index) => {
     pokemon.id = +offSet + (index + 1);
   });
 
   return data;
-}
+};
 
 
 export default async function Pokemons({ searchParams }: { searchParams: { page: string | undefined } }) {
@@ -55,7 +56,6 @@ export default async function Pokemons({ searchParams }: { searchParams: { page:
       <div className={styled.pokemons_pagination}>
         <ControlsPagination  amountPage={amountPage} />
       </div>
-
     </section>
   )
 }
