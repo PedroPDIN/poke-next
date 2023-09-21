@@ -22,6 +22,11 @@
     justify-content: center;
     padding: 20px;
     width: 500px;
+
+    .icon_error {
+      color: $font-red;
+      font-size: 80px;
+    };
     
     .message_error {
       align-items: center;
@@ -57,7 +62,7 @@
       };
 
       .division_word {
-        color: $font-red;
+        color: $font-black;
         font-size: 12px;
         font-weight: 600;
       };
