@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { GoAlertFill } from "react-icons/go";
 
-import style from "@/styles/pages/_errorFind.module.scss";
+import style from "@/styles/components/_errorFind.module.scss";
 
 export default function ErrorFind() {
   return (
