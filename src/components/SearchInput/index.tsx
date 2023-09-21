@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -8,9 +9,17 @@ import style from "@/styles/components/_searchInput.module.scss";
 
 export default function SearchInput() {
   const [namePoke, setNamePoke] = useState<string>("");
+  const router = useRouter();
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setNamePoke(e.target.value)
+  };
+
+  const handleKeyRedirect = (e: React.KeyboardEvent<HTMLInputElement>): void => { 
+    if (e.key === "Enter") {
+      router.push(`/search/${namePoke}`);
+      setNamePoke("");
+    };
   };
 
   return (
@@ -20,15 +29,16 @@ export default function SearchInput() {
         placeholder="ex: Pikachu"
         value={namePoke}
         name={namePoke}
-        onChange={onChange}
+        onChange={handleChange}
+        onKeyDown={handleKeyRedirect}
       />
       <Link
         className={style.icon_content}
         href={`/search/${namePoke}`}
         onClick={() => setNamePoke("")}
       >
-        <AiOutlineSearch className={ style.icon } />
+        <AiOutlineSearch className={style.icon} />
       </Link>
     </div>
   )
-}
+};

@@ -62,7 +62,13 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
         <h1 className={style.title}>{name}</h1>
 
         <div className={style.img_container}>
-          <Image src={img} alt={name} fill className={style.img} />
+          <Image
+            fill
+            src={img}
+            alt={name}
+            className={style.img}
+            sizes="100vw"
+          />
         </div>
 
         <div className={style.info_container}>

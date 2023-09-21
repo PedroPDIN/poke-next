@@ -3,7 +3,7 @@ import { Nunito } from 'next/font/google'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import '@/styles/main.scss'
+import '../styles/main.scss';
 
 const nunito = Nunito({ subsets: ['latin'] })
 
