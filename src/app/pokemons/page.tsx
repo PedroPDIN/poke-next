@@ -35,7 +35,11 @@ export default async function Pokemons({ searchParams }: { searchParams: { page:
         <CardsPokemon
           key={pokemon.id}
           pokeId={pokemon.id as number}
-          name={pokemon.name} />
+          name={pokemon.name}
+          alternativeId={ 
+            pokemon.url.split("/").at(-2) as string
+          }
+        />
       ))}
 
       <div className={styled.pokemons_pagination}>
@@ -43,4 +47,4 @@ export default async function Pokemons({ searchParams }: { searchParams: { page:
       </div>
     </section>
   )
-}
+};
