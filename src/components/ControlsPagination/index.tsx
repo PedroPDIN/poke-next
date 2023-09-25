@@ -14,7 +14,7 @@ interface Props {
 export default function ControlsPagination({ amountPage }: Props) {
   const [page, setPage] = useState<number>(2);
   const route = useRouter();
-
+  
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };

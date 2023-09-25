@@ -7,7 +7,7 @@ import style from "@/styles/pages/_home.module.scss"
 
 async function dataPokemon(): Promise<dataPokemons> {
   const maxLimit: number = 40;
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?&limit=${maxLimit}`);
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?&limit=${maxLimit}`);
   const data: dataPokemons = await response.json();
 
   data.results.forEach((pokemon, index) => {
