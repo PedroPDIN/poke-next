@@ -10,24 +10,29 @@
   padding: 20px;
   width: 100%;
 
-  .header_title {
-    align-items: center;
-    display: flex;
-    gap: 1em;
-    
-    .icon {
-      margin-left: 24px;
-    };
-  
-    h1 {
-      font-size: 28px;
-      width: 100%;
+  .nav_link {
+    text-decoration: none;
 
-      span {
-        color: $font-red;
+    .header_title {
+      align-items: center;
+      display: flex;
+      gap: 1em;
+      
+      .icon {
+        margin-left: 24px;
+      };
+    
+      h1 {
+        color: $font-black;
+        font-size: 28px;
+        width: 100%;
+  
+        span {
+          color: $font-red;
+        };
       };
     };
-  };
+  }
 
   .header_search {
     margin-right: 24px;
