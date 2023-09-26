@@ -19,4 +19,4 @@ export default function ErrorHome({
       <h1>Erro no servidor, tente novamente mais tarde.</h1>
     </main>
   )
-}
+};
