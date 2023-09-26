@@ -12,21 +12,23 @@ interface Props {
 };
 
 export default function ControlsPagination({ amountPage }: Props) {
-  const [page, setPage] = useState<number>(2);
-  const route = useRouter();
+  const [page, setPage] = useState<string>(localStorage.getItem("page") || "2");
+  const router = useRouter();
   
-  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number): void => {
+    localStorage.setItem("page", value.toString());
+    const pageLocal: string = localStorage.getItem("page") as string
+    setPage(pageLocal);
   };
-  
-  route.push(`/pokemons/?page=${page}`);
+
+  router.push(`/pokemons/?page=${page}`)
 
   return (
     <Stack spacing={2}>
       <Pagination
         className={styled.pagination_content}
         count={amountPage}
-        page={page}
+        page={+page}
         onChange={handleChange}
         size='small'
         variant='outlined'

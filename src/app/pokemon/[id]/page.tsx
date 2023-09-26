@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { StaticImageData } from "next/image";
-import { BiArrowBack } from "react-icons/bi";
 import { infoPokemon } from "@/interfaces/IPokemon.interface";
 import pokeball from "../../../../public/images/pokeball-2.png";
+import BtnBack from "@/components/BtnBack";
 
 import style from "@/styles/pages/_pokemon.module.scss";
 
@@ -54,10 +53,7 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
   return (
     <section className={style.pokemon_container}>
       <article className={style.pokemon_content}>
-        <Link className={style.nav_content} href="/">
-          <BiArrowBack />
-          Voltar
-        </Link>
+        <BtnBack />
 
         <h1 className={style.title}>{name}</h1>
 
@@ -88,6 +84,5 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
         )}
       </article>
     </section>
-
   )
 };

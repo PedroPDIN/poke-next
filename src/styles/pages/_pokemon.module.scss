@@ -19,23 +19,6 @@
     padding: 26px;
     width: 40em;
 
-    .nav_content {
-      align-items: center;
-      color: $font-black;
-      display: flex;
-      font-size: 20px;
-      font-weight: 700;
-      gap: 0.3em;
-      max-width: 100%;
-      margin-left: 20px;
-      transition: all 0.2s;
-      text-decoration: none;
-
-      &:hover {
-        color: $font-red
-      };
-    };
-
     .title {
       font-size: 28px;
       text-align: center;
