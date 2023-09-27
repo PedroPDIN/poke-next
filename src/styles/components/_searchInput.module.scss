@@ -40,3 +40,17 @@
     };
   };
 };
+
+@media only screen and (max-width: $screen-size-mobile) {
+  .search_container {
+    input {
+      display: flex;
+      font-size: 17px;
+      padding: 2px;
+    };
+
+    .icon_content {
+      padding: 0px;
+    };
+  };
+};
