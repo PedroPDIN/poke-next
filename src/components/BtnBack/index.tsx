@@ -3,19 +3,21 @@
 import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 
-import style from "../../styles/components/_btnBack.module.scss";
+interface Props {
+  typePage: 'search' | 'pokemon';
+};
 
-export default function BtnBack() {
+export default function BtnBack({ typePage }: Props) {
   const router = useRouter();
 
   return (
     <button
       type="button"
-      className={style.nav_content_back}
+      className={`nav_content_back_${typePage}`}
       onClick={() => router.back()}
     >
       <BiArrowBack />
       Voltar
     </button>
   )
-}
+};

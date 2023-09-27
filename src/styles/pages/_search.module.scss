@@ -7,13 +7,14 @@
   .nav_content {
     display: flex;
     flex-direction: column;
+    gap: 0.6em;
     padding: {
       top: 40px;
       left: 100px;
     };
     width: 100%;
 
-    .btn_back {
+    .btn_back_home {
       align-items: center;
       color: $font-black;
       display: flex;
@@ -23,8 +24,6 @@
       width: 10%;
       text-decoration: none;
       transition: all 0.2s;
-      width: 100%;
-
 
       &:hover {
         color: $font-red

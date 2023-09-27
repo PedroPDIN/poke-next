@@ -2,8 +2,9 @@ import Link from "next/link";
 import { StaticImageData } from "next/image";
 import { BiArrowBack } from "react-icons/bi";
 import { searchPokemon } from "@/interfaces/IPokemon.interface";
-import ImageCard from "@/components/ImageCard";
 import pokeball from "../../../../public/images/pokeball-2.png";
+import ImageCard from "@/components/ImageCard";
+import BtnBack from "@/components/BtnBack";
 
 import style from "@/styles/pages/_search.module.scss";
 
@@ -32,10 +33,12 @@ export default async function SearchPokemon({ params }: { params: { name: string
     <section className={style.search_container}>
 
       <article className={style.nav_content}>
-        <Link className={style.btn_back} href="/">
+        <Link className={style.btn_back_home} href="/">
           <BiArrowBack />
           Página Inicial
         </Link>
+
+        <BtnBack typePage="search"/>
 
         <span className={style.info_search}>
           Resultado de <span className={style.name}>{`${params.name}`}</span>.

@@ -1,23 +1,10 @@
 @import '../variables';
+@import '../mixins';
 
-.nav_content_back {
-  align-items: center;
-  background-color: $background-color-white;
-  border: 0;
-  color: $font-black;
-  cursor: pointer;
-  display: flex;
-  font-size: 20px;
-  font-weight: 700;
-  gap: 0.3em;
-  justify-content: center;
-  max-width: 100%;
-  margin-left: 20px;
-  transition: all 0.2s;
-  text-decoration: none;
-  width: 18%;
+.nav_content_back_pokemon {
+  @include btn_back_style($background-color-white, center, 18%, 20px);
+};
 
-  &:hover {
-    color: $font-red
-  };
+.nav_content_back_search {
+  @include btn_back_style($background-color-primary, start, 8%, 0px);
 };

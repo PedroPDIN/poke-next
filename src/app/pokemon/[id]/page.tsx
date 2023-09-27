@@ -53,7 +53,7 @@ export default async function Pokemon({ params }: { params: { id: string } }) {
   return (
     <section className={style.pokemon_container}>
       <article className={style.pokemon_content}>
-        <BtnBack />
+        <BtnBack typePage="pokemon"/>
 
         <h1 className={style.title}>{name}</h1>
 
