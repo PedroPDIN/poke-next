@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .search_container {
   height: 90vh;
@@ -125,5 +126,83 @@
         };
       };
     };
+  };
+};
+
+@media only screen and (max-width: $screen-small) {
+  .search_container {
+    height: 200%;
+    width: 100vw;
+
+    .nav_content {
+      padding: {
+        top: 20px;
+        left: 10px;
+      };
+      
+      .btn_back_home  {
+        width: 60%;
+      };
+
+      .info_search {
+        font-size: 20px;
+      };
+    };
+    
+    .card_container {
+      justify-content: center;
+
+      .card_content {
+        height: 240px;
+        margin-left: 0px;
+        justify-content: center;
+
+        .numeric_id_pokemon {
+          width: auto;
+        };
+
+        .img_pokemon .img {
+          padding: 0px;
+        };
+
+        .btn_description {
+          font-size: 14px;
+          margin: {
+            bottom: 10px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+          };
+        };
+      };
+    };
+  };
+};
+
+@media only screen and (min-width: $screen-small) and (max-width: $screen-size-mobile) {
+  .search_container {
+    @include body_style_in_footer(50em);
+
+    .nav_content {
+      padding-left: 50px;
+
+      .btn_back_home {
+        width: 70%;
+      };
+    };
+
+    .card_container {
+      justify-content: center;
+
+      .card_content {
+        margin-left: 0px;
+      };
+    };
+  };
+};
+
+@media only screen and (min-width: $screen-size-mobile) {
+  .search_container .nav_content .btn_back_home {
+    width: 70%;
   };
 };
