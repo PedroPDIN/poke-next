@@ -5,7 +5,8 @@ import { dataPokemons } from "@/interfaces/IPokemon.interface";
 import styled from "@/styles/pages/_pokemons.module.scss";
   
 async function paginationPokemon(page: number | undefined): Promise<dataPokemons> {
-  const limit: number = 40;
+  const limit: number = 20;
+  // é necessário alterar também para o mesmo valor a variável "countCard" no componente page abaixo.
   let offSet: number = 0;
 
   if (page) {
@@ -26,7 +27,7 @@ async function paginationPokemon(page: number | undefined): Promise<dataPokemons
 export default async function Pokemons({ searchParams }: { searchParams: { page: string | undefined } }) {
   const { page } = searchParams;
   const { count, results } = await paginationPokemon(+page!);
-  const countCard = 40;
+  const countCard = 20;
   const amountPage = Math.ceil(count / countCard);
 
   return (

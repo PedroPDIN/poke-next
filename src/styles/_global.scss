@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,3 +11,9 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
+@media only screen and (max-width: $screen-small) {
+  body {
+    width: fit-content;
+  };
+};

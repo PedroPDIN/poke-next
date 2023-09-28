@@ -66,3 +66,35 @@
       };
     };
   };
+
+@media only screen and (max-width: $screen-small) {
+  .card_container {
+    height: 16em;
+    width: auto;
+
+    .numeric_id_pokemon b {
+      font-size: 14px;
+      margin: 0px !important;
+    };
+
+    .img_pokemon {
+      height: 120px;
+      width: 100px;
+    };
+
+    .name_pokemon {
+      font-size: 18px;
+    };
+
+    .btn_description {
+      border-radius: 0px;
+      font-size: 10px;
+      margin: {
+        top: 10px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px
+      };
+    };
+  };
+};

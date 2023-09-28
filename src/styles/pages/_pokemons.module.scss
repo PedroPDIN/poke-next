@@ -12,3 +12,17 @@
     position: absolute;
   };
 };
+
+@media only screen and (max-width: $screen-small) {
+  .pokemons_container .pokemons_pagination {
+      position: relative;
+      margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: $screen-small) and (max-width: $screen-size-mobile) {
+  .pokemons_container .pokemons_pagination {
+    width: 50%;
+    margin-bottom: 110px;
+  };
+};
