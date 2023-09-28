@@ -19,6 +19,14 @@
     padding: 26px;
     width: 40em;
 
+    .btn_back_pokemon {
+      width: 80%;
+
+      button {
+        justify-content: flex-start;
+      };
+    };
+
     .title {
       font-size: 28px;
       text-align: center;
@@ -82,6 +90,29 @@
         color: $font-red;
         display: flex;
         font-weight: 700;
+      };
+    };
+  };
+};
+
+@media only screen and (max-width: $screen-size-mobile) {
+  .pokemon_container .pokemon_content {
+    width: 20em;
+
+    .btn_back_pokemon {
+      display: flex;
+      justify-content: start;
+      
+      button  {
+        margin: 0px;
+      };
+    };
+
+    .img_container {
+      width: auto;
+
+      .img {
+        justify-content: center;
       };
     };
   };
