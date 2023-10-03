@@ -1,31 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Poké-Next
 
-## Getting Started
+#### Bem-vindo ao Poké-Next, o projeto tem como finalidade aventurar-se no universo de Pokémon, trazendo assim, uma listagem de todos os pokémons (através da busca de dados do [PokéAPI](https://pokeapi.co/docs/v2)) e também oferecer informações de cada pokémon (peso, altura, tipos).
 
-First, run the development server:
+## Como funciona
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+A aplicação irá renderizar todo os pokémons disponíveis através da API [PokéAPI](https://pokeapi.co/docs/v2), todas os pokémons estarão em listagem. O usuário poderá selecionar um pokémon e, logo após a  este evento de seleção, o mesmo irá ser redirecionado para uma página em que irá ser exibido as informações "básicas" do pokémon escolhido, tais como peso, altura e seu tipo. O usuário também pode filtrar pelo o nome do pokémon, para que diretamente possa busca pelo o seu pokémon favorito.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto foi construído através do [NextJS](https://nextjs.org/docs) um framework que possui a mesma estrutura de construção do [React](https://react.dev/), inicialmente na sua versão 13, já a responsabilidade da estilização ficou por conta do [Sass](https://sass-lang.com/). Este projeto usa [next/font](https://nextjs.org/docs/basic-features/font-optimization) para otimizar e carregar automaticamente o Nunito, uma fonte personalizada do Google.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<details>
+  <summary><b>Consumo de dados (API)</b></summary>
+  <br/>
+  
+  <p>Todos os dados exibidos da aplicação foi consumido atráves do <a href="https://pokeapi.co/docs/v2">PokéAPI</a>, a API é gratuito e aberto para uso, porém ela é somente feita para consumo.</p>
+</details>
 
-## Learn More
+<details>
+  <summary><b>Stacks</b></summary>
+  <br/>
 
-To learn more about Next.js, take a look at the following resources:
+  - [`NextJS (versão 13+)`](https://nextjs.org/docs)
+  - [`Sass`](https://sass-lang.com/)
+  - [`TypeScript`](https://www.typescriptlang.org/docs/)
+  - [`Mui Core`](https://mui.com/core/)
+  - [`React-icons`](https://react-icons.github.io/react-icons/)
+</details>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<details>
+  <summary><b>Instalação do projeto</b></summary>
+  <br />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+  1. Clone o repositório
+
+  - Use o comando: `git@github.com:PedroPDIN/poke-next.git`.
+  - Entre na pasta do repositório que você acabou de clonar:
+      - `cd poke-next`
+
+  2. Instale as dependências
+
+  - Use o comando: `npm install`. 
+
+  3. Logo após isso basta inicia-lo através do servidor de desenvolvimento.
+
+  - use o comando: `npm run dev` 
+
+  4. (opcional) Ou você pode incia-lo em produção.
+
+  - usando o comando: `npm run start` (Lembrando que o projeto deve ter passado pelo o processo de build).
+</details>
+<br/>
 
 ## Deploy on Vercel
 
