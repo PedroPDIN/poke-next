@@ -28,6 +28,8 @@ export default function ImageCard({ name, url }: Props) {
         paddingLeft: '20px',
         paddingRight: '20px',
       }}
+      placeholder="blur"
+      blurDataURL={pokeball.blurDataURL as string}
     />
   );
 };
