@@ -53,4 +53,4 @@ O projeto foi construído através do [NextJS](https://nextjs.org/docs) um frame
 
 ## Deploy
 
-Este projeto está hospedada na plataforma da [Vercel](https://vercel.com/docs). Com isso, você pode acessar a aplicação clicando [AQUI](poke-next-lac.vercel.app).
+Este projeto está hospedada na plataforma da [Vercel](https://vercel.com/docs). Com isso, você pode acessar a aplicação clicando [AQUI](https://poke-next-lac.vercel.app/).
