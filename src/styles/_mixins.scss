@@ -36,7 +36,7 @@
   margin-left: $ml;
   transition: all 0.2s;
   text-decoration: none;
-  width: $w;
+  width: $w !important;
 
   &:hover {
     color: $font-red

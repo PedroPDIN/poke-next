@@ -6,12 +6,12 @@
 };
 
 .nav_content_back_search {
-  @include btn_back_style($background-color-primary, start, 8%, 0px);
+  @include btn_back_style($background-color-primary, start, 180px, 0px);
 };
 
 @media only screen and (max-width: $screen-small) {
   .nav_content_back_pokemon {
-    @include btn_back_style($background-color-white, center, 100%, 20px);
+    @include btn_back_style($background-color-white, center, 100px, 20px);
   };
 
   .nav_content_back_search {
@@ -25,16 +25,6 @@
   };
 
   .nav_content_back_search {
-    @include btn_back_style($background-color-primary, start, 70%, 0px);
+    @include btn_back_style($background-color-primary, start, 180px, 0px);
   };
 }
-
-@media only screen and (min-width: $screen-size-mobile) {
-  .nav_content_back_pokemon {
-    @include btn_back_style($background-color-white, center, 70%, 20px);
-  };
-
-  .nav_content_back_search {
-    @include btn_back_style($background-color-primary, start, 70%, 0px);
-  };
-};

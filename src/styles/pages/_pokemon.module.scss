@@ -96,23 +96,28 @@
 };
 
 @media only screen and (max-width: $screen-size-mobile) {
-  .pokemon_container .pokemon_content {
-    width: 20em;
+  .pokemon_container {
+    margin-top: 150px;
+    padding-bottom: 250px;
 
-    .btn_back_pokemon {
-      display: flex;
-      justify-content: start;
-      
-      button  {
-        margin: 0px;
+    .pokemon_content {
+      width: 20em;
+  
+      .btn_back_pokemon {
+        display: flex;
+        justify-content: start;
+        
+        button  {
+          margin: 0px;
+        };
       };
-    };
-
-    .img_container {
-      width: auto;
-
-      .img {
-        justify-content: center;
+  
+      .img_container {
+        width: auto;
+  
+        .img {
+          justify-content: center;
+        };
       };
     };
   };
